@@ -1,0 +1,31 @@
+## Faraz Khan 04.07.16
+rm(list=ls())
+library(edgeR)
+options(scipen = 500) # bias against scientific notation
+options(digits = 1) # show fewer decimal places
+
+samples <- read.csv("bamGnut_adac1040_counts_data_no-absent_simple.csv",row.names=1) #take count data
+x = samples[,c(4,8,12,14,16,18)]
+group <- factor(c(1,1,1,2,2,2)) #groupsamples for single landrace, including all time points and treatment.
+y <- DGEList(counts=x,group=group) #create DGElist
+#dim(y)
+## Since the smallest group size is Three, we keep genes that achieve at least one count per million (cpm) in at least Three samples:
+keep <- rowSums(cpm(y)>1) >= 3
+y <- y[keep, , keep.lib.sizes=FALSE] ## revision 08-10-2015
+#dim(y)
+## Re-compute the library sizes:
+y$samples$lib.size <- colSums(y$counts)
+## Compute effective library sizes using TMM normalization:
+y <- calcNormFactors(y)
+edgeR.cpm.norm1 = cpm(y, normalized.sizes = TRUE, log = TRUE)
+
+#Hierarchial clustering on norm.data using hclust
+gendist <- dist(t(edgeR.cpm.norm1))
+hclust <- hclust(gendist)
+plot(hclust)
+
+#Principal component analysis using prcomp
+pca1 <- prcomp(gendist)
+plot(pca1$rotation[,1:2], cex=.001)
+text(pca1$rotation[,1], pca1$rotation[,2], rownames(pca1$rotation[,1:2]), cex = 0.7)
+plot(pca1$sdev, cex= 1)

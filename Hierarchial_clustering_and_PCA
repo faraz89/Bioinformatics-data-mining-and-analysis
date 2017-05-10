@@ -6,7 +6,7 @@ options(digits = 1) # show fewer decimal places
 
 samples <- read.csv("bamGnut_adac1040_counts_data_no-absent_simple.csv",row.names=1) #take count data
 x = samples[,c(4,8,12,14,16,18)]
-group <- factor(c(1,1,1,2,2,2)) #groupsamples for single landrace, including all time points and treatment.
+group <- factor(c(1,1,1,2,2,2)) #group samples
 y <- DGEList(counts=x,group=group) #create DGElist
 #dim(y)
 ## Since the smallest group size is Three, we keep genes that achieve at least one count per million (cpm) in at least Three samples:

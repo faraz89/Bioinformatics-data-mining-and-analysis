@@ -11,7 +11,7 @@ y <- DGEList(counts=x,group=group) #create DGElist
 dim(y)
 ## Since the smallest group size is Three, we keep genes that achieve at least one count per million (cpm) in at least Three samples:
 keep <- rowSums(cpm(y)>1) >= 3
-y <- y[keep, , keep.lib.sizes=FALSE] ## revision 08-10-2015
+y <- y[keep, , keep.lib.sizes=FALSE]
 #dim(y)
 ## Re-compute the library sizes:
 y$samples$lib.size <- colSums(y$counts)

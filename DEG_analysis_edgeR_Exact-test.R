@@ -4,7 +4,6 @@ library(edgeR)
 options(scipen = 500) # bias against scientific notation
 options(digits = 1) # show fewer decimal places
 
-## FOLLOW edgeR EXAMPLE 4.3 pg48 (RNA-Seq, two groups)
 samples <- read.csv("bamGnut_adac1040_counts_data_no-absent_simple.csv",row.names=1)
 x = samples[,c(4,8,12,14,16,18)]
 group <- factor(c(1,1,1,2,2,2)) #group samples.

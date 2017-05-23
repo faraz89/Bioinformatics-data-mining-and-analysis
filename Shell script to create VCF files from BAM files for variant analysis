@@ -1,0 +1,3 @@
+samtools mpileup -uf ../transcriptome/all.combined.min15.groups.fa /media/rde/7ff77b06-ff90-4501-b34e-2d2f63b86e75/final.combined.remapping.Dec.2016/4.Alignment/$1 | bcftools call -m -O z - > $1.vcf.gz #create zip .vcf files
+bcftools index $1.vcf.gz #index the .vcf file
+bcftools consensus -f ../transcriptome/all.combined.min15.groups.fa $1.vcf.gz > $1.fa #create .fa file containing all variants

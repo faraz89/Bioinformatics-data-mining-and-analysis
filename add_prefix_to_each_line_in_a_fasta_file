@@ -1,0 +1,8 @@
+# add prefix to each line in a file
+
+prefix = "BAM."
+with open("test.txt", "r") as f1:
+    with open("testee.txt", "w") as dest:
+        for line in f1:
+                if line.startswith(">"):
+                    dest.write("%s%s\n" % (prefix, line.rstrip()))   

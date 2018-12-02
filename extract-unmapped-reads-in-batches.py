@@ -26,7 +26,7 @@ for bam in bam_files:
     while True:
         jobs_running = len([p for p in processes if p.poll()==None])
         print jobs_running
-        if jobs_running<24:break
+        if jobs_running<max_processes:break
         os.wait()
 
 #Check if all the child processes were closed

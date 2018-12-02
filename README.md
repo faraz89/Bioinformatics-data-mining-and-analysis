@@ -1,1 +1,1 @@
-# Scripts to analyse and mine bioinformatic data
+# Scripts to analyse and mine bioinformatics data

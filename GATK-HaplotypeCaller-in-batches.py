@@ -2,6 +2,11 @@
 # coding: utf-8
 # AUTHOR: Faraz Khan
 
+'''
+Running GATK haplotype caller in batches. It takes input a file containing the names of the bam files and a file containing range of Intervals from Reference.  
+
+'''
+
 import subprocess
 import os
 import time

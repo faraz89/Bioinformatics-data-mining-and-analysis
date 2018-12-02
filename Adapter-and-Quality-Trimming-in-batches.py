@@ -26,7 +26,7 @@ for R1 in R1_file:
     while True:
         jobs_running = len([p for p in processes if p.poll()==None])
 	 print jobs_running
-        if jobs_running<24:break
+        if jobs_running<max_processes:break
         os.wait()
         #24 jobs will run at a time.
 

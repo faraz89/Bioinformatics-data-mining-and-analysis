@@ -1,1 +1,1 @@
-# Faraz_code_hub
+# Scripts to analyse and mine bioinformatic data

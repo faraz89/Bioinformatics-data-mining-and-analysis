@@ -3,7 +3,7 @@
 # AUTHOR: Faraz Khan
 
 """
-    Script to find the coordinates that were unaligned from nucmer analysis.
+    Script to find the coordinates that were unaligned to target sequence from nucmer analysis.
 """
 #Extract start and end alignment region coordinates from the file generated from show-coords command from nucmer analysis. 
 #Import start and end alignment region coordinates.

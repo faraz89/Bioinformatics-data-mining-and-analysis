@@ -10,7 +10,6 @@ max_processes = 10
 Script to run Adapter and quality trimming of Illumina data in small batches.
 Credits - Cutadapt is developed by Marcel Martin (https://journal.embnet.org/index.php/embnetjournal/article/view/200/479)
 
-
 '''
 
 #import a text file containing file names of forward reads. 

@@ -25,7 +25,7 @@ for bam in bam_files:
 
     while True:
         jobs_running = len([p for p in processes if p.poll()==None])
-	    print jobs_running
+	print jobs_running
         if jobs_running<24:break
         os.wait()
 

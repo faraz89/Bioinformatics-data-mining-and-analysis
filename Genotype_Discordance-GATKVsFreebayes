@@ -4,6 +4,7 @@
 
 """
 parse vcf to compare discordance between gatk and freebayes variant callers. 
+
 """
 #Note: Change "#CHROM to CHROM" in the vcf file before running the script
 

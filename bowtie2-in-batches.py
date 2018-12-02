@@ -7,8 +7,8 @@ max_processes = 10
 
 """
     Run Bowtie Aligner in batches
-    Bowtie is developed by Ben Langmead et al.
-    Credits - Samtools is developed by John Marshall and Petr Danecek et al. Original author Heng Li.
+    Credits - Bowtie is developed by Ben Langmead et al.
+    Samtools is developed by John Marshall and Petr Danecek et al. Original author Heng Li.
 """
 
 #Open file containing file names of forward reads.

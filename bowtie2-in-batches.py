@@ -20,8 +20,7 @@ for R1 in R1fastq_files:
     R2 = R1.replace('_R1.fastq.gz','_R2.fastq.gz')
     #Change fastq extension to bam for bam output.
     bams = R1.replace('_R1.fastq.gz','.sorted.bam') 
-    cmd = 'bowtie2 -1 %s -2 %s -x Mes_bowtie -p 6 --end-to-end --sensitive | samtools view -bS - | samtools sort -@ 6 -o %s -' % (R1,R2,bams)
-    print cmd    
+    cmd = 'bowtie2 -1 %s -2 %s -x Mes_bowtie -p 6 --end-to-end --sensitive | samtools view -bS - | samtools sort -@ 6 -o %s -' % (R1,R2,bams) 
     processes.add(subprocess32.Popen([cmd], shell=True))
     print 'Submited job %s' % cmd
 

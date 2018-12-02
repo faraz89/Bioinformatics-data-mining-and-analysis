@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
-# AUTHOR: Faraz Khan
+# AUTHOR: Faraz Khan.
 
 '''
 Running GATK haplotype caller in batches. It takes input a file containing the names of the bam files and a file containing range of Intervals from Reference.  
 Credits: GATK toolkit is a product developed by members of BROAD INSTITUTE.
+Thanks to Bruno Santos for helping in resolving a bug.
 '''
 
 import subprocess

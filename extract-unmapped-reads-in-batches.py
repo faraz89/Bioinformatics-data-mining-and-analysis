@@ -9,7 +9,7 @@ max_processes = 10
 '''
 Extract unmapped reads from the bam files and convert bam to fasta
 Credits - Samtools is developed by John Marshall and Petr Danecek et al. Original author Heng Li
-Seqtk Copyright (c) 20082-2012 by Heng Li <lh3@me.com>
+Seqtk Copyright (c) 2008-2012 by Heng Li <lh3@me.com>
 '''
 
 #import a file containing the names of all the bam files.
